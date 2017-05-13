@@ -1,0 +1,20 @@
+package com.sunilsamuel.optical.optimal.rules;
+
+import com.sunilsamuel.optical.optimal.planner.model.OpticalDriveBucket;
+import com.sunilsamuel.optical.optimal.planner.model.FolderPlanningEntity;
+
+rule "Match the Sizes of Buckets"
+when
+	$bucket : OpticalDriveBucket ($size : size, $id : id)
+	$totalSize : Number (longValue > $size) from accumulate (
+		FolderPlanningEntity (
+			opticalDriveBucket != null,
+			opticalDriveBucket.id == $bucket.id,
+			$folderSize : size
+		),
+		sum ($folderSize)
+	)
+then
+	//System.out.println("folder with id ["+$id +"] size ["+$totalSize+"] is bigger than size of bucket ["+$size+"]");
+	scoreHolder.addHardConstraintMatch(kcontext, $size - $totalSize.longValue());
+end

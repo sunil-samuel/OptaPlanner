@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- fruitcombo.fxml place in same directory as FruitComboApplication.java 
+	ensure build system copies the fxml file to the build output path -->
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?scenebuilder-stylesheet fruitcombo.css?>
+
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" styleClass="main-panel"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+	prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+	<content>
+		<VBox prefHeight="200.0" prefWidth="100.0" />
+	</content>
+	<stylesheets>
+		<URL value="@/styles/styles.css" />
+	</stylesheets>
+</ScrollPane>

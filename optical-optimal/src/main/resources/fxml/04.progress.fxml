@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?scenebuilder-stylesheet fruitcombo.css?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="302.0"
+	prefWidth="395.0" styleClass="main-panel" xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.sunilsamuel.optical.optimal.controller.OpticalOptimalController">
+	<children>
+		<Label alignment="CENTER" contentDisplay="CENTER" layoutX="78.0"
+			layoutY="137.0" prefHeight="29.0" prefWidth="239.0"
+			text="Processing, please wait..." textAlignment="CENTER"
+			AnchorPane.bottomAnchor="136.0" AnchorPane.leftAnchor="78.0"
+			AnchorPane.rightAnchor="78.0" AnchorPane.topAnchor="137.0">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Label>
+	</children>
+</AnchorPane>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<solver>
+	<!-- S C A N - A N N O T A T E D - C L A S S E S -->
+	<!-- <solutionClass>com.tke.servicesight.routeplanner.model.planner.RoutePlannerSolution</solutionClass> -->
+	<!-- <entityClass>com.tke.servicesight.routeplanner.model.Visit</entityClass> -->
+
+	<!-- Planner needs to be told which classes in your domain model are planning entities, which properties are planning variables, 
+		etc. The 'scanAnnotatedClasses' will automatically look for the appropriate annotations. To speed up the scanning, use the 
+		'packageInclude' to define the model classes. -->
+	<scanAnnotatedClasses>
+		<packageInclude>com.sunilsamuel.optical.optimal.model</packageInclude>
+		<packageInclude>com.sunilsamuel.optical.optimal.planner.model</packageInclude>
+	</scanAnnotatedClasses>
+
+	<!-- S C O R E - C O N F I G U R A T I O N -->
+	<scoreDirectorFactory>
+		<!-- Define the algorithm to use for scoring. BENDABLE, HARD_MEDIUM_SOFT, HARD_SOFT, HARD_SOFT_BIG_DECIMAL, HARD_SOFT_DOUBLE 
+			(not recommended), HARD_SOFT_LONG, SIMPLE, SIMPLE_BIG_DECIMAL, SIMPLE_DOUBLE (not recommended),SIMPLE_LONG -->
+		<scoreDefinitionType>HARD_SOFT_LONG</scoreDefinitionType>
+		<!-- Location of the DRL file -->
+		<scoreDrl>optaplanner/rules/00-Initialization.drl</scoreDrl>
+		<scoreDrl>optaplanner/rules/01-SizesMatches.drl</scoreDrl>
+		<initializingScoreTrend>ONLY_DOWN</initializingScoreTrend>
+	</scoreDirectorFactory>
+
+	<!-- Optimization algorithms configuration -->
+	<termination>
+		<secondsSpentLimit>10</secondsSpentLimit>
+	</termination>
+	<constructionHeuristic>
+		<constructionHeuristicType>FIRST_FIT</constructionHeuristicType>
+	</constructionHeuristic>
+	<localSearch>
+		<!-- Use Late Acceptance (when acceptor and forager is commented out, default to late acceptance) -->
+		<!-- <localSearchType>TABU_SEARCH</localSearchType> -->
+	</localSearch>
+</solver>
