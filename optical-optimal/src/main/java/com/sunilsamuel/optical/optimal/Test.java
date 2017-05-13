@@ -1,5 +1,5 @@
 /**
- * MainApp.java 
+ * Test.java 
  *
  * Sunil Samuel CONFIDENTIAL
  *
@@ -15,23 +15,12 @@
  * material is strictly forbidden unless prior written permission
  * is obtained from Sunil Samuel.
  */
-
 package com.sunilsamuel.optical.optimal;
 
-import java.util.ResourceBundle;
+/**
+ * @author sunilsamuel
+ *
+ */
+public class Test {
 
-import com.sunilsamuel.optical.optimal.controller.OpticalOptimalController;
-
-import javafx.application.Application;
-import javafx.stage.Stage;
-
-public class MainApp extends Application {
-	public static void main(String[] args) throws Exception {
-		launch(args);
-	}
-
-	public void start(Stage stage) throws Exception {
-		ResourceBundle bundle = ResourceBundle.getBundle("properties/messages");
-		new OpticalOptimalController().handleIntroductionPage(stage, bundle);
-	}
 }
