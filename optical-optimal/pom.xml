@@ -22,8 +22,7 @@
 	</properties>
 
 	<organization>
-		<!-- Used as the 'Vendor' for JNLP generation -->
-		<name>Your Organisation</name>
+		<name>Sunil Samuel</name>
 	</organization>
 	<dependencies>
 		<!-- Apache Commons -->
@@ -134,9 +133,7 @@
 						</configuration>
 					</execution>
 				</executions>
-
 			</plugin>
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
