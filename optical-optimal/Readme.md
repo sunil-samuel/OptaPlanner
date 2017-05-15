@@ -6,4 +6,4 @@ http://www.sunilsamuel.com
 </p>
 
 **<h1 align='center'>Optical Optimal :: Optical Driver Optimization</h1>**
-<img src="/documentation/gfx/splash.png">
+<img src="/optical-optimal/documentation/gfx/splash.png">
